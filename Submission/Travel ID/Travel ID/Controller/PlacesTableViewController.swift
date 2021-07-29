@@ -43,7 +43,7 @@ class PlacesTableViewController: UITableViewController {
         //FetchImageURL().setImageToImageView(imageContainer: cell.placesImage, imageUrl: "\(String(describing: places.image))")
         cell.placeName?.text = places.name
         cell.placeDetail.text = places.description
-        cell.placeLikes.text = "\(String(describing: places.like))"
+        cell.placeLikes.text = "\(String(describing: Int(places.like!) ))"
         
         return cell
     }
