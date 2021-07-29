@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F7D8552726B150B80028AF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8552626B150B80028AF47 /* AppDelegate.swift */; };
 		F7D8552926B150B80028AF47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8552826B150B80028AF47 /* SceneDelegate.swift */; };
-		F7D8552B26B150B80028AF47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8552A26B150B80028AF47 /* ViewController.swift */; };
+		F7D8552B26B150B80028AF47 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8552A26B150B80028AF47 /* HomeViewController.swift */; };
 		F7D8552E26B150B90028AF47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D8552C26B150B90028AF47 /* Main.storyboard */; };
 		F7D8553026B151170028AF47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7D8552F26B151170028AF47 /* Assets.xcassets */; };
 		F7D8553326B151170028AF47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D8553126B151170028AF47 /* LaunchScreen.storyboard */; };
@@ -24,7 +24,7 @@
 		F7D8552326B150B80028AF47 /* Travel ID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel ID.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D8552626B150B80028AF47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7D8552826B150B80028AF47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F7D8552A26B150B80028AF47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7D8552A26B150B80028AF47 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F7D8552D26B150B90028AF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7D8552F26B151170028AF47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7D8553226B151170028AF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		F7D8553C26B153D10028AF47 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F7D8552A26B150B80028AF47 /* ViewController.swift */,
+				F7D8552A26B150B80028AF47 /* HomeViewController.swift */,
 				F7D8554226B164240028AF47 /* PlacesTableViewController.swift */,
 			);
 			path = Controller;
@@ -184,7 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7D8552B26B150B80028AF47 /* ViewController.swift in Sources */,
+				F7D8552B26B150B80028AF47 /* HomeViewController.swift in Sources */,
 				F7D8552726B150B80028AF47 /* AppDelegate.swift in Sources */,
 				F7D8554526B1654C0028AF47 /* PlacesTableViewCell.swift in Sources */,
 				F7D8554126B160B40028AF47 /* FetchData.swift in Sources */,
@@ -348,7 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.patriciafiona.Travel-ID";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -367,7 +367,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.patriciafiona.Travel-ID";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

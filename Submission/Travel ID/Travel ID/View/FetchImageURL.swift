@@ -20,6 +20,10 @@ class FetchImageURL{
                 // a background thread
                 DispatchQueue.main.async {
                     imageContainer.image = UIImage(data: data)
+                    
+                    //make rounded
+                    imageContainer.clipsToBounds = true
+                    imageContainer.layer.cornerRadius = 20
                 }
             } else {
                 // show as an alert if you want to

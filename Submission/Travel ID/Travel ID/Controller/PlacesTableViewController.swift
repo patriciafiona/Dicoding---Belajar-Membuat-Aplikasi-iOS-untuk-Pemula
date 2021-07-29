@@ -40,24 +40,17 @@ class PlacesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.placesCell, for: indexPath) as! PlacesTableViewCell
         
         let places = placesSpace.places[indexPath.row]
-        //FetchImageURL().setImageToImageView(imageContainer: cell.placesImage, imageUrl: "\(String(describing: places.image))")
         cell.placeName?.text = places.name
         cell.placeDetail.text = places.description
         cell.placeLikes.text = "\(String(describing: Int(places.like!) ))"
+        FetchImageURL().setImageToImageView(imageContainer: cell.placesImage, imageUrl: "\(String(describing: places.image))")
+        FetchImageURL().setImageToImageView(imageContainer: cell.placeBackground, imageUrl: "\(String(describing: places.image))")
+        
+        //make rounded
+        cell.placesImage.clipsToBounds = true
+        cell.placesImage.layer.cornerRadius = 20
         
         return cell
-    }
-    
-    private func priceFormat(price: Double)-> String{
-        let formatter = NumberFormatter()
-        formatter.locale = Locale(identifier: "id_ID")
-        formatter.groupingSeparator = "."
-        formatter.numberStyle = .decimal
-        if let formattedTipAmount = formatter.string(from: price as NSNumber) {
-           return ("Rp " + formattedTipAmount + ",00")
-        }
-        
-        return ""
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

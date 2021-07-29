@@ -22,5 +22,5 @@ struct Places: Decodable{
     let longitude: Double?
     let latitude: Double?
     let like: Int?
-    let image: String?
+    let image: String
 }
