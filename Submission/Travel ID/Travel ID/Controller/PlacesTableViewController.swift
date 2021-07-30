@@ -14,6 +14,8 @@ class PlacesTableViewController: UITableViewController {
         static let showPlacesDetail = "ShowPlacesDetail"
     }
     
+    var didLayout = false
+    
     private let url = "https://tourism-api.dicoding.dev/list"
     var placesSpace = APIData(){
         didSet{
@@ -30,6 +32,13 @@ class PlacesTableViewController: UITableViewController {
         })
         
         super.viewDidLoad()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        if !self.didLayout {
+            self.didLayout = true // only need to do this once
+            self.tableView.reloadData()
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

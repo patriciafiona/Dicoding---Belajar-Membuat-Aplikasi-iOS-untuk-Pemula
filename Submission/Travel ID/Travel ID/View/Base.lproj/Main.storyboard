@@ -144,7 +144,7 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparent_dark" translatesAutoresizingMaskIntoConstraints="NO" id="cgJ-kg-h1G">
                                             <rect key="frame" x="0.0" y="-14.5" width="414" height="219"/>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparent_dark" translatesAutoresizingMaskIntoConstraints="NO" id="HGE-W8-471">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparent_gray" translatesAutoresizingMaskIntoConstraints="NO" id="HGE-W8-471">
                                             <rect key="frame" x="0.0" y="-14.5" width="414" height="219"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDE-ji-dkV">
@@ -156,7 +156,7 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin.and.ellipse" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6nw-m7-Hqw">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin.and.ellipse" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6nw-m7-Hqw">
                                             <rect key="frame" x="24" y="30.5" width="128" height="128.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="128" id="JkX-vH-WBU"/>
@@ -301,6 +301,7 @@
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="transparent_dark" width="1544" height="1409"/>
+        <image name="transparent_gray" width="1920" height="1080"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
