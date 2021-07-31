@@ -63,6 +63,11 @@ class PlacesTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow,
+           segue.identifier == PropertyKeys.showPlacesDetail {
+            let detailPlaceViewController = segue.destination as! DetailPlaceViewController
+            detailPlaceViewController.place = placesSpace.places[indexPath.row]
+        }
     }
 
 }

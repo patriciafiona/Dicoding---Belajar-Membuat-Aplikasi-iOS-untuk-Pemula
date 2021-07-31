@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F762276B26B3F90C00097DD6 /* DetailPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F762276A26B3F90C00097DD6 /* DetailPlaceViewController.swift */; };
 		F7D8552726B150B80028AF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8552626B150B80028AF47 /* AppDelegate.swift */; };
 		F7D8552926B150B80028AF47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8552826B150B80028AF47 /* SceneDelegate.swift */; };
 		F7D8552B26B150B80028AF47 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8552A26B150B80028AF47 /* HomeViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F762276A26B3F90C00097DD6 /* DetailPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlaceViewController.swift; sourceTree = "<group>"; };
 		F7D8552326B150B80028AF47 /* Travel ID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel ID.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D8552626B150B80028AF47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7D8552826B150B80028AF47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				F7D8552A26B150B80028AF47 /* HomeViewController.swift */,
 				F7D8554226B164240028AF47 /* PlacesTableViewController.swift */,
+				F762276A26B3F90C00097DD6 /* DetailPlaceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				F7D8554526B1654C0028AF47 /* PlacesTableViewCell.swift in Sources */,
 				F7D8554126B160B40028AF47 /* FetchData.swift in Sources */,
 				F7D8553F26B160910028AF47 /* Entities.swift in Sources */,
+				F762276B26B3F90C00097DD6 /* DetailPlaceViewController.swift in Sources */,
 				F7D8552926B150B80028AF47 /* SceneDelegate.swift in Sources */,
 				F7D8554726B1685F0028AF47 /* FetchImageURL.swift in Sources */,
 				F7D8554326B164240028AF47 /* PlacesTableViewController.swift in Sources */,

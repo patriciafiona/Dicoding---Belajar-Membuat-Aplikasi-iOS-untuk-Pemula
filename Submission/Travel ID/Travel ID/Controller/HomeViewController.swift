@@ -93,11 +93,7 @@ class HomeViewController: UIViewController {
             self.homeBannerImage.frame.size.width = currentWidth!
             
             //Container Radius
-            let rectShape = CAShapeLayer()
-            rectShape.bounds = self.homeBannerImage.frame
-            rectShape.position = self.homeBannerImage.center
-            rectShape.path = UIBezierPath(roundedRect: self.homeBannerImage.bounds, byRoundingCorners: [.bottomRight], cornerRadii: CGSize(width: 50, height: 50)).cgPath
-            self.homeBannerImage.layer.mask = rectShape
+            DetailPlaceViewController.init().setImageRounded(self.homeBannerImage)
             
             //SubCountainer Radius
             let rectShape02 = CAShapeLayer()
