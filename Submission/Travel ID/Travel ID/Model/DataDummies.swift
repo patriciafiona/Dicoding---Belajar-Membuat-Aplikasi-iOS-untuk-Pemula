@@ -7,6 +7,35 @@
 
 import Foundation
 import UIKit
+
+var galeries: [Galery] = [
+    Galery(placeID: 1,
+           placeImage: "https://asset.kompas.com/crops/7BAA_ly7b-MmcoKLamKOPBypZx8=/53x0:676x415/750x500/data/photo/2020/05/18/5ec278e912802.jpg"),
+    Galery(placeID: 1,
+           placeImage: "https://akcdn.detik.net.id/visual/2018/10/16/56ec3a2c-9983-4d6d-aae8-2914ac7d055b_169.jpeg?w=650"),
+    Galery(placeID: 1,
+           placeImage: "https://cdn-2.tstatic.net/travel/foto/bank/images/danau-kelimutu-nusa-tenggara-timur_20180125_185012.jpg"),
+    Galery(placeID: 1,
+           placeImage: "https://akcdn.detik.net.id/visual/2016/04/01/2507c9e7-72c9-406e-aa74-054c081674c1_169.jpg?w=650"),
+    Galery(placeID: 2,
+           placeImage: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Indonesia_-_Lake_Toba_%2826224127503%29.jpg"),
+    Galery(placeID: 2,
+           placeImage: "https://maritim.go.id/konten/unggahan/2016/01/tongging-ok.jpg"),
+    Galery(placeID: 2,
+           placeImage: "https://koran-jakarta.com/images/article/phpbzvgmg_resized.jpg"),
+    Galery(placeID: 2,
+           placeImage: "https://awsimages.detik.net.id/community/media/visual/2020/09/13/danau-toba_169.jpeg?w=780&q=80"),
+    Galery(placeID: 3,
+           placeImage: "https://asset.kompas.com/crops/oUbd-oWgmK9GQitYBij1i8DX-1Y=/0x73:1280x713/750x500/data/photo/2019/07/24/5d37bf7ba9d0f.jpg"),
+    Galery(placeID: 3,
+           placeImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Mount_Bromo_at_sunrise%2C_showing_its_volcanoes_and_Mount_Semeru_%28background%29.jpg/1200px-Mount_Bromo_at_sunrise%2C_showing_its_volcanoes_and_Mount_Semeru_%28background%29.jpg"),
+    Galery(placeID: 3,
+           placeImage: "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1598343691/pe2jv1eqlxxtrfusftm2.jpg"),
+    Galery(placeID: 3,
+           placeImage: "https://asset.kompas.com/crops/jNJCw78jRpATerjMmadbBwqblkE=/0x0:1800x1200/750x500/data/photo/2021/05/10/6099375e04acb.jpg"),
+    Galery(placeID: 3,
+           placeImage: "https://awsimages.detik.net.id/community/media/visual/2020/08/16/puncak-seruni-gunung-bromo-2_169.jpeg?w=780&q=90"),
+]
  
 var reviews: [Review] = [
     Review(placeID: 1,

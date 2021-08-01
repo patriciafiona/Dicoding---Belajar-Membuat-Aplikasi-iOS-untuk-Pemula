@@ -33,3 +33,8 @@ struct Review {
     let username: String
     let description: String
 }
+
+struct Galery{
+    let placeID: Int
+    let placeImage: String
+}

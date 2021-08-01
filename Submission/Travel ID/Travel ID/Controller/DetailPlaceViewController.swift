@@ -16,6 +16,7 @@ class DetailPlaceViewController: UIViewController {
     @IBOutlet weak var placeDetail: UILabel!
     
     @IBOutlet weak var ReviewTableView: UITableView!
+    @IBOutlet weak var galeryCollectionView: UICollectionView!
     
     var place: Places?
     var didLayout = false
@@ -25,19 +26,26 @@ class DetailPlaceViewController: UIViewController {
         setDisplayData()
         
         ReviewTableView.dataSource = self
+        galeryCollectionView.dataSource = self
+        
+        ReviewTableView.isHidden = false
+        galeryCollectionView.isHidden = true
     }
     
     override func viewWillLayoutSubviews() {
         setImageRounded(gradientTranparent)
+        setImageRounded(placeImage)
         
         if !self.didLayout {
             self.didLayout = true // only need to do this once
             self.ReviewTableView.reloadData()
+            self.galeryCollectionView.reloadData()
         }
     }
     
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         setImageRounded(gradientTranparent)
+        setImageRounded(placeImage)
     }
     
     private func setDisplayData(){
@@ -66,14 +74,17 @@ class DetailPlaceViewController: UIViewController {
         case 0:
             // Show review
             ReviewTableView.isHidden = false
+            galeryCollectionView.isHidden = true
             break
         case 1:
             // show galery
             ReviewTableView.isHidden = true
+            galeryCollectionView.isHidden = false
             break
         case 2:
             // show map
             ReviewTableView.isHidden = true
+            galeryCollectionView.isHidden = true
             break
         default:
             print("Segment index Index out of range")
@@ -112,4 +123,31 @@ extension DetailPlaceViewController: UITableViewDataSource {
             return UITableViewCell()
         }
     }
+}
+
+extension DetailPlaceViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let filteredTableData = galeries.filter {
+            $0.placeID == place?.id
+        }
+        return filteredTableData.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "GaleryCollection",
+            for: indexPath
+          ) as! GaleryCollectionViewCell
+          
+        let filteredTableData = galeries.filter {
+            $0.placeID == place?.id
+        }
+        
+        let data = filteredTableData[indexPath.row]
+        
+        FetchImageURL().setImageToImageView(imageContainer: cell.galeryImage, imageUrl: "\(String(describing: data.placeImage))")
+            
+          return cell
+    }
+    
 }

@@ -21,6 +21,7 @@
 		F7D8554526B1654C0028AF47 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8554426B1654C0028AF47 /* PlacesTableViewCell.swift */; };
 		F7D8554726B1685F0028AF47 /* FetchImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8554626B1685F0028AF47 /* FetchImageURL.swift */; };
 		F7DCF2AF26B660F4007FCE29 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DCF2AE26B660F4007FCE29 /* ReviewTableViewCell.swift */; };
+		F7DCF2B126B6B542007FCE29 /* GaleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DCF2B026B6B542007FCE29 /* GaleryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		F7D8554426B1654C0028AF47 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
 		F7D8554626B1685F0028AF47 /* FetchImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchImageURL.swift; sourceTree = "<group>"; };
 		F7DCF2AE26B660F4007FCE29 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		F7DCF2B026B6B542007FCE29 /* GaleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				F7D8552C26B150B90028AF47 /* Main.storyboard */,
 				F7D8554626B1685F0028AF47 /* FetchImageURL.swift */,
 				F7DCF2AE26B660F4007FCE29 /* ReviewTableViewCell.swift */,
+				F7DCF2B026B6B542007FCE29 /* GaleryCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				F7D8553F26B160910028AF47 /* Entities.swift in Sources */,
 				F7DCF2AF26B660F4007FCE29 /* ReviewTableViewCell.swift in Sources */,
 				F762276B26B3F90C00097DD6 /* DetailPlaceViewController.swift in Sources */,
+				F7DCF2B126B6B542007FCE29 /* GaleryCollectionViewCell.swift in Sources */,
 				F7D8552926B150B80028AF47 /* SceneDelegate.swift in Sources */,
 				F7D8554726B1685F0028AF47 /* FetchImageURL.swift in Sources */,
 				F7D8554326B164240028AF47 /* PlacesTableViewController.swift in Sources */,

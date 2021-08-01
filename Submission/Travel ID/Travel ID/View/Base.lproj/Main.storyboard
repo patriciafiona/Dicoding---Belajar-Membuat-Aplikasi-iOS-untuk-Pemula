@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -480,6 +481,40 @@
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kNT-uS-9Wy">
+                                                <rect key="frame" x="18" y="638" width="366" height="838"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uok-aR-2MA">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GaleryCollection" id="aTZ-aF-jKu" customClass="GaleryCollectionViewCell" customModule="Travel_ID" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="A58-AX-ieS">
+                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i6W-fP-fzy">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="i6W-fP-fzy" firstAttribute="leading" secondItem="A58-AX-ieS" secondAttribute="leading" id="ejI-lC-mCa"/>
+                                                                <constraint firstItem="i6W-fP-fzy" firstAttribute="top" secondItem="A58-AX-ieS" secondAttribute="top" id="ely-Va-upf"/>
+                                                                <constraint firstAttribute="bottom" secondItem="i6W-fP-fzy" secondAttribute="bottom" id="o9O-d1-Xwj"/>
+                                                                <constraint firstAttribute="trailing" secondItem="i6W-fP-fzy" secondAttribute="trailing" id="wy7-MC-gvN"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="galeryImage" destination="i6W-fP-fzy" id="2z6-Vt-H3j"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -488,6 +523,7 @@
                                             <constraint firstItem="TFK-Jo-gO1" firstAttribute="leading" secondItem="Jc4-Nq-ouh" secondAttribute="leading" constant="24" id="7vN-qF-yxQ"/>
                                             <constraint firstItem="9ii-CX-cxv" firstAttribute="trailing" secondItem="QDf-W1-xl1" secondAttribute="trailing" id="CfY-rV-vjX"/>
                                             <constraint firstItem="hps-2V-38g" firstAttribute="leading" secondItem="Jc4-Nq-ouh" secondAttribute="leading" constant="24" id="DyS-7m-maV"/>
+                                            <constraint firstAttribute="trailing" secondItem="kNT-uS-9Wy" secondAttribute="trailing" constant="30" id="GB2-Kz-lC2"/>
                                             <constraint firstAttribute="trailing" secondItem="jK6-P8-QDj" secondAttribute="trailing" constant="23" id="HzU-dT-flQ"/>
                                             <constraint firstItem="QDf-W1-xl1" firstAttribute="width" secondItem="Jc4-Nq-ouh" secondAttribute="width" id="Ihn-8E-HmU"/>
                                             <constraint firstItem="QDf-W1-xl1" firstAttribute="top" secondItem="Jc4-Nq-ouh" secondAttribute="top" id="Mie-5R-V6e"/>
@@ -496,16 +532,19 @@
                                             <constraint firstItem="CIL-zj-5YV" firstAttribute="leading" secondItem="Jc4-Nq-ouh" secondAttribute="leading" constant="24" id="QE5-Ua-e2t"/>
                                             <constraint firstItem="TFK-Jo-gO1" firstAttribute="top" secondItem="QDf-W1-xl1" secondAttribute="bottom" constant="23" id="QL9-mL-DDE"/>
                                             <constraint firstItem="9ii-CX-cxv" firstAttribute="bottom" secondItem="QDf-W1-xl1" secondAttribute="bottom" id="TJX-mg-3ig"/>
+                                            <constraint firstItem="kNT-uS-9Wy" firstAttribute="leading" secondItem="Jc4-Nq-ouh" secondAttribute="leading" constant="18" id="UVk-V9-bhc"/>
                                             <constraint firstItem="jK6-P8-QDj" firstAttribute="leading" secondItem="Jc4-Nq-ouh" secondAttribute="leading" constant="24" id="WKB-Ur-r0S"/>
                                             <constraint firstItem="EzD-VS-JEl" firstAttribute="leading" secondItem="Jc4-Nq-ouh" secondAttribute="leading" constant="18" id="WgN-91-RS6"/>
                                             <constraint firstAttribute="trailing" secondItem="hps-2V-38g" secondAttribute="trailing" constant="23" id="XZd-sp-rcm"/>
                                             <constraint firstAttribute="trailing" secondItem="QDf-W1-xl1" secondAttribute="trailing" id="ZEU-N0-Jhw"/>
+                                            <constraint firstAttribute="bottom" secondItem="kNT-uS-9Wy" secondAttribute="bottom" constant="24" id="bfO-2s-YZA"/>
                                             <constraint firstAttribute="height" constant="1500" id="dkz-ZO-Jq4"/>
                                             <constraint firstItem="9ii-CX-cxv" firstAttribute="leading" secondItem="QDf-W1-xl1" secondAttribute="leading" id="gl1-18-opE"/>
                                             <constraint firstItem="9ii-CX-cxv" firstAttribute="top" secondItem="QDf-W1-xl1" secondAttribute="top" id="hBl-Hk-blg"/>
                                             <constraint firstItem="EzD-VS-JEl" firstAttribute="top" secondItem="ccF-Nu-Fih" secondAttribute="bottom" constant="8.5" id="hQV-9v-Vfe"/>
                                             <constraint firstAttribute="trailing" secondItem="CIL-zj-5YV" secondAttribute="trailing" constant="23" id="hgB-1G-aWW"/>
                                             <constraint firstItem="EzD-VS-JEl" firstAttribute="leading" secondItem="ccF-Nu-Fih" secondAttribute="leading" id="iWK-Jx-Uw6"/>
+                                            <constraint firstItem="kNT-uS-9Wy" firstAttribute="top" secondItem="jK6-P8-QDj" secondAttribute="bottom" constant="26" id="jpQ-ub-6JH"/>
                                             <constraint firstItem="TFK-Jo-gO1" firstAttribute="leading" secondItem="hps-2V-38g" secondAttribute="leading" id="mJ3-Ez-FSg"/>
                                             <constraint firstItem="bCn-gA-dAz" firstAttribute="top" secondItem="ccF-Nu-Fih" secondAttribute="top" id="o7M-JZ-qMf"/>
                                             <constraint firstItem="TFK-Jo-gO1" firstAttribute="leading" secondItem="jK6-P8-QDj" secondAttribute="leading" id="qCf-12-QqM"/>
@@ -546,6 +585,7 @@
                     <navigationItem key="navigationItem" id="gKB-p8-3cY"/>
                     <connections>
                         <outlet property="ReviewTableView" destination="CIL-zj-5YV" id="ttB-5u-7AJ"/>
+                        <outlet property="galeryCollectionView" destination="kNT-uS-9Wy" id="BJV-Jm-cb4"/>
                         <outlet property="gradientTranparent" destination="9ii-CX-cxv" id="Rp3-cd-goC"/>
                         <outlet property="placeAddress" destination="6uQ-Xc-cVj" id="VYK-q8-XsC"/>
                         <outlet property="placeDetail" destination="hps-2V-38g" id="MP4-vp-GGO"/>
