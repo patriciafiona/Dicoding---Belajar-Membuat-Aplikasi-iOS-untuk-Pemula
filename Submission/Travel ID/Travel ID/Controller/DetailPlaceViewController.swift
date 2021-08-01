@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class DetailPlaceViewController: UIViewController {
+class DetailPlaceViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var placeImage: UIImageView!
     @IBOutlet weak var gradientTranparent: UIImageView!
@@ -15,7 +17,8 @@ class DetailPlaceViewController: UIViewController {
     @IBOutlet weak var placeAddress: UILabel!
     @IBOutlet weak var placeDetail: UILabel!
     
-    @IBOutlet weak var ReviewTableView: UITableView!
+    @IBOutlet weak var reviewTableView: UITableView!
+    @IBOutlet weak var mapKitView: MKMapView!
     @IBOutlet weak var galeryCollectionView: UICollectionView!
     
     var place: Places?
@@ -24,12 +27,14 @@ class DetailPlaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDisplayData()
+        setMap()
         
-        ReviewTableView.dataSource = self
+        reviewTableView.dataSource = self
         galeryCollectionView.dataSource = self
         
-        ReviewTableView.isHidden = false
+        reviewTableView.isHidden = false
         galeryCollectionView.isHidden = true
+        mapKitView.isHidden = true
     }
     
     override func viewWillLayoutSubviews() {
@@ -38,7 +43,7 @@ class DetailPlaceViewController: UIViewController {
         
         if !self.didLayout {
             self.didLayout = true // only need to do this once
-            self.ReviewTableView.reloadData()
+            self.reviewTableView.reloadData()
             self.galeryCollectionView.reloadData()
         }
     }
@@ -46,6 +51,21 @@ class DetailPlaceViewController: UIViewController {
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
         setImageRounded(gradientTranparent)
         setImageRounded(placeImage)
+    }
+    
+    private func setMap(){
+        let location = CLLocationCoordinate2D(latitude: (place?.latitude)!,
+                                              longitude: (place?.longitude)!)
+            
+        let span = MKCoordinateSpan(latitudeDelta: 0.08, longitudeDelta: 0.08)
+        let region = MKCoordinateRegion(center: location, span: span)
+        mapKitView.setRegion(region, animated: true)
+            
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = place?.name
+        annotation.subtitle = place?.address
+        mapKitView.addAnnotation(annotation)
     }
     
     private func setDisplayData(){
@@ -73,18 +93,21 @@ class DetailPlaceViewController: UIViewController {
         switch index{
         case 0:
             // Show review
-            ReviewTableView.isHidden = false
+            reviewTableView.isHidden = false
             galeryCollectionView.isHidden = true
+            mapKitView.isHidden = true
             break
         case 1:
             // show galery
-            ReviewTableView.isHidden = true
+            reviewTableView.isHidden = true
             galeryCollectionView.isHidden = false
+            mapKitView.isHidden = true
             break
         case 2:
             // show map
-            ReviewTableView.isHidden = true
+            reviewTableView.isHidden = true
             galeryCollectionView.isHidden = true
+            mapKitView.isHidden = false
             break
         default:
             print("Segment index Index out of range")

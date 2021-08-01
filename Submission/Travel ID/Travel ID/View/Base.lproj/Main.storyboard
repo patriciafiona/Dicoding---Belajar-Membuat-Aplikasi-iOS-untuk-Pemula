@@ -251,7 +251,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="224" id="4b5-GE-zh7"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -515,11 +515,15 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NfH-rs-MNp">
+                                                <rect key="frame" x="0.0" y="629" width="414" height="683"/>
+                                            </mapView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="EzD-VS-JEl" firstAttribute="centerY" secondItem="6uQ-Xc-cVj" secondAttribute="centerY" id="0dg-eL-Xcc"/>
                                             <constraint firstItem="jK6-P8-QDj" firstAttribute="top" secondItem="hps-2V-38g" secondAttribute="bottom" constant="27" id="2L2-pz-8bB"/>
+                                            <constraint firstAttribute="bottom" secondItem="NfH-rs-MNp" secondAttribute="bottom" constant="188" id="2jE-7p-OkP"/>
                                             <constraint firstItem="TFK-Jo-gO1" firstAttribute="leading" secondItem="Jc4-Nq-ouh" secondAttribute="leading" constant="24" id="7vN-qF-yxQ"/>
                                             <constraint firstItem="9ii-CX-cxv" firstAttribute="trailing" secondItem="QDf-W1-xl1" secondAttribute="trailing" id="CfY-rV-vjX"/>
                                             <constraint firstItem="hps-2V-38g" firstAttribute="leading" secondItem="Jc4-Nq-ouh" secondAttribute="leading" constant="24" id="DyS-7m-maV"/>
@@ -528,6 +532,7 @@
                                             <constraint firstItem="QDf-W1-xl1" firstAttribute="width" secondItem="Jc4-Nq-ouh" secondAttribute="width" id="Ihn-8E-HmU"/>
                                             <constraint firstItem="QDf-W1-xl1" firstAttribute="top" secondItem="Jc4-Nq-ouh" secondAttribute="top" id="Mie-5R-V6e"/>
                                             <constraint firstItem="bCn-gA-dAz" firstAttribute="leading" secondItem="ccF-Nu-Fih" secondAttribute="trailing" constant="8" symbolic="YES" id="N6G-I7-ZPF"/>
+                                            <constraint firstItem="NfH-rs-MNp" firstAttribute="top" secondItem="CIL-zj-5YV" secondAttribute="top" id="NPJ-LL-0tp"/>
                                             <constraint firstItem="CIL-zj-5YV" firstAttribute="top" secondItem="jK6-P8-QDj" secondAttribute="bottom" constant="17" id="PXX-Yq-4t7"/>
                                             <constraint firstItem="CIL-zj-5YV" firstAttribute="leading" secondItem="Jc4-Nq-ouh" secondAttribute="leading" constant="24" id="QE5-Ua-e2t"/>
                                             <constraint firstItem="TFK-Jo-gO1" firstAttribute="top" secondItem="QDf-W1-xl1" secondAttribute="bottom" constant="23" id="QL9-mL-DDE"/>
@@ -539,10 +544,12 @@
                                             <constraint firstAttribute="trailing" secondItem="QDf-W1-xl1" secondAttribute="trailing" id="ZEU-N0-Jhw"/>
                                             <constraint firstAttribute="bottom" secondItem="kNT-uS-9Wy" secondAttribute="bottom" constant="24" id="bfO-2s-YZA"/>
                                             <constraint firstAttribute="height" constant="1500" id="dkz-ZO-Jq4"/>
+                                            <constraint firstItem="NfH-rs-MNp" firstAttribute="leading" secondItem="Jc4-Nq-ouh" secondAttribute="leading" id="fZi-qu-Gxw"/>
                                             <constraint firstItem="9ii-CX-cxv" firstAttribute="leading" secondItem="QDf-W1-xl1" secondAttribute="leading" id="gl1-18-opE"/>
                                             <constraint firstItem="9ii-CX-cxv" firstAttribute="top" secondItem="QDf-W1-xl1" secondAttribute="top" id="hBl-Hk-blg"/>
                                             <constraint firstItem="EzD-VS-JEl" firstAttribute="top" secondItem="ccF-Nu-Fih" secondAttribute="bottom" constant="8.5" id="hQV-9v-Vfe"/>
                                             <constraint firstAttribute="trailing" secondItem="CIL-zj-5YV" secondAttribute="trailing" constant="23" id="hgB-1G-aWW"/>
+                                            <constraint firstAttribute="trailing" secondItem="NfH-rs-MNp" secondAttribute="trailing" id="hsv-BL-UGA"/>
                                             <constraint firstItem="EzD-VS-JEl" firstAttribute="leading" secondItem="ccF-Nu-Fih" secondAttribute="leading" id="iWK-Jx-Uw6"/>
                                             <constraint firstItem="kNT-uS-9Wy" firstAttribute="top" secondItem="jK6-P8-QDj" secondAttribute="bottom" constant="26" id="jpQ-ub-6JH"/>
                                             <constraint firstItem="TFK-Jo-gO1" firstAttribute="leading" secondItem="hps-2V-38g" secondAttribute="leading" id="mJ3-Ez-FSg"/>
@@ -584,13 +591,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="gKB-p8-3cY"/>
                     <connections>
-                        <outlet property="ReviewTableView" destination="CIL-zj-5YV" id="ttB-5u-7AJ"/>
                         <outlet property="galeryCollectionView" destination="kNT-uS-9Wy" id="BJV-Jm-cb4"/>
                         <outlet property="gradientTranparent" destination="9ii-CX-cxv" id="Rp3-cd-goC"/>
+                        <outlet property="mapKitView" destination="NfH-rs-MNp" id="Gig-Mt-zbO"/>
                         <outlet property="placeAddress" destination="6uQ-Xc-cVj" id="VYK-q8-XsC"/>
                         <outlet property="placeDetail" destination="hps-2V-38g" id="MP4-vp-GGO"/>
                         <outlet property="placeImage" destination="QDf-W1-xl1" id="a4v-L8-TkR"/>
                         <outlet property="placeName" destination="ccF-Nu-Fih" id="nKs-0h-ag4"/>
+                        <outlet property="reviewTableView" destination="CIL-zj-5YV" id="ybn-Vi-swC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xe1-BL-xWX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
