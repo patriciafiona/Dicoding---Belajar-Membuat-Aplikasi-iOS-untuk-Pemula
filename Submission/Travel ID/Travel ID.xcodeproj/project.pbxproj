@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F762276B26B3F90C00097DD6 /* DetailPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F762276A26B3F90C00097DD6 /* DetailPlaceViewController.swift */; };
+		F7BF76E026B6491100AA049B /* DataDummies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BF76DF26B6491100AA049B /* DataDummies.swift */; };
 		F7D8552726B150B80028AF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8552626B150B80028AF47 /* AppDelegate.swift */; };
 		F7D8552926B150B80028AF47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8552826B150B80028AF47 /* SceneDelegate.swift */; };
 		F7D8552B26B150B80028AF47 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8552A26B150B80028AF47 /* HomeViewController.swift */; };
@@ -19,10 +20,12 @@
 		F7D8554326B164240028AF47 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8554226B164240028AF47 /* PlacesTableViewController.swift */; };
 		F7D8554526B1654C0028AF47 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8554426B1654C0028AF47 /* PlacesTableViewCell.swift */; };
 		F7D8554726B1685F0028AF47 /* FetchImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8554626B1685F0028AF47 /* FetchImageURL.swift */; };
+		F7DCF2AF26B660F4007FCE29 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DCF2AE26B660F4007FCE29 /* ReviewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F762276A26B3F90C00097DD6 /* DetailPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlaceViewController.swift; sourceTree = "<group>"; };
+		F7BF76DF26B6491100AA049B /* DataDummies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDummies.swift; sourceTree = "<group>"; };
 		F7D8552326B150B80028AF47 /* Travel ID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel ID.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D8552626B150B80028AF47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7D8552826B150B80028AF47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		F7D8554226B164240028AF47 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
 		F7D8554426B1654C0028AF47 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
 		F7D8554626B1685F0028AF47 /* FetchImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchImageURL.swift; sourceTree = "<group>"; };
+		F7DCF2AE26B660F4007FCE29 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 				F7D8554426B1654C0028AF47 /* PlacesTableViewCell.swift */,
 				F7D8552C26B150B90028AF47 /* Main.storyboard */,
 				F7D8554626B1685F0028AF47 /* FetchImageURL.swift */,
+				F7DCF2AE26B660F4007FCE29 /* ReviewTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			children = (
 				F7D8553E26B160900028AF47 /* Entities.swift */,
 				F7D8554026B160B40028AF47 /* FetchData.swift */,
+				F7BF76DF26B6491100AA049B /* DataDummies.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,7 +197,9 @@
 				F7D8552726B150B80028AF47 /* AppDelegate.swift in Sources */,
 				F7D8554526B1654C0028AF47 /* PlacesTableViewCell.swift in Sources */,
 				F7D8554126B160B40028AF47 /* FetchData.swift in Sources */,
+				F7BF76E026B6491100AA049B /* DataDummies.swift in Sources */,
 				F7D8553F26B160910028AF47 /* Entities.swift in Sources */,
+				F7DCF2AF26B660F4007FCE29 /* ReviewTableViewCell.swift in Sources */,
 				F762276B26B3F90C00097DD6 /* DetailPlaceViewController.swift in Sources */,
 				F7D8552926B150B80028AF47 /* SceneDelegate.swift in Sources */,
 				F7D8554726B1685F0028AF47 /* FetchImageURL.swift in Sources */,

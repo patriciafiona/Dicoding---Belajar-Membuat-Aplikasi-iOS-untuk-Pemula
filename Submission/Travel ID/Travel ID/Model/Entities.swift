@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct APIData: Decodable{
     var error: Bool = false
@@ -23,4 +24,12 @@ struct Places: Decodable{
     let latitude: Double?
     let like: Int?
     let image: String
+}
+
+struct Review {
+    let placeID: Int
+    let photo: UIImage
+    let title: String
+    let username: String
+    let description: String
 }

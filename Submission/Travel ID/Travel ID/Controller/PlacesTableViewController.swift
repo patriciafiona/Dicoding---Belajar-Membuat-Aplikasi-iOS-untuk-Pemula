@@ -21,7 +21,6 @@ class PlacesTableViewController: UITableViewController {
         didSet{
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-                print("Data: \(self.placesSpace)")
             }
         }
     }
