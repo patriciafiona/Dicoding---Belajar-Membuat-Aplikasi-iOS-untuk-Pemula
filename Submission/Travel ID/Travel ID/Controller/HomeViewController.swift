@@ -25,7 +25,6 @@ extension UIView {
 }
 
 class HomeViewController: UIViewController {
-
     @IBOutlet weak var scrollContainer: UIView!
     @IBOutlet weak var homeBannerImage: UIView!
     @IBOutlet weak var homeBannerSubContainer: UIImageView!
@@ -37,12 +36,43 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
     
+    @IBOutlet weak var recomendTableView: UITableView!
+    
+    struct PropertyKeys {
+        static let placesCell = "RecomendCell"
+        static let showPlacesDetail = "ShowRecomendedPlacesDetail"
+    }
+    
+    var didLayout = false
+    
+    private let url = "https://tourism-api.dicoding.dev/list"
+    var placesSpace = APIData(){
+        didSet{
+            DispatchQueue.main.async {
+                self.recomendTableView.reloadData()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
+        FetchData().fetchData(urlForFetchingData: url, completionHandler: {
+            placesArray in self.placesSpace = placesArray
+        })
+        
         super.viewDidLoad()
+        
+        recomendTableView.dataSource = self
         
         setBannerCorner()
         setCategoryColor()
         setProfileStyle(img: profileImage)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        if !self.didLayout {
+            self.didLayout = true // only need to do this once
+            self.recomendTableView.reloadData()
+        }
     }
     
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
@@ -104,6 +134,51 @@ class HomeViewController: UIViewController {
         }
         
     }
+    
+}
 
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let filteredTableData = placesSpace.places.filter {
+            recomendedPlace.contains($0.id)
+        }
+        return filteredTableData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "RecomendCell", for: indexPath) as? RecomendTableViewCell {
+        
+            let filteredTableData = placesSpace.places.filter {
+                recomendedPlace.contains($0.id)
+            }
+            
+            let places = filteredTableData[indexPath.row]
+            cell.placeName?.text = places.name
+            cell.placeDetail.text = places.description
+            cell.placeLike.text = "\(String(describing: Int(places.like!) ))"
+            FetchImageURL().setImageToImageView(imageContainer: cell.placeImage, imageUrl: "\(String(describing: places.image))")
+            
+            //make rounded
+            cell.placeImage.clipsToBounds = true
+            cell.placeImage.layer.cornerRadius = 20
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = recomendTableView.indexPathForSelectedRow,
+           segue.identifier == PropertyKeys.showPlacesDetail {
+            let detailPlaceViewController = segue.destination as! DetailPlaceViewController
+            
+            let filteredTableData = placesSpace.places.filter {
+                recomendedPlace.contains($0.id)
+            }
+            
+            detailPlaceViewController.place = filteredTableData[indexPath.row]
+        }
+    }
+    
 }
 

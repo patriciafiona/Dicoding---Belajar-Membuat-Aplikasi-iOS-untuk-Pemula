@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+let recomendedPlace: [Int] = [3,7,9]
+
 var galeries: [Galery] = [
     Galery(placeID: 1,
            placeImage: "https://asset.kompas.com/crops/7BAA_ly7b-MmcoKLamKOPBypZx8=/53x0:676x415/750x500/data/photo/2020/05/18/5ec278e912802.jpg"),

@@ -138,7 +138,6 @@ extension DetailPlaceViewController: UITableViewDataSource {
             cell.reviewUsername.text = review.username
             cell.reviewProfile.image = review.photo
         
-            // Kode ini digunakan untuk membuat imageView memiliki frame bound/lingkaran
             cell.reviewProfile.layer.cornerRadius = cell.reviewProfile.frame.height / 2
             cell.reviewProfile.clipsToBounds = true
             return cell

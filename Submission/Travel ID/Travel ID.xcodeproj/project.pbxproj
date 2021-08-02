@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F762276B26B3F90C00097DD6 /* DetailPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F762276A26B3F90C00097DD6 /* DetailPlaceViewController.swift */; };
+		F76F839F26B82F9F00582F0F /* RecomendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76F839E26B82F9F00582F0F /* RecomendTableViewCell.swift */; };
+		F76F83A126B838CF00582F0F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76F83A026B838CE00582F0F /* AboutViewController.swift */; };
 		F7BF76E026B6491100AA049B /* DataDummies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BF76DF26B6491100AA049B /* DataDummies.swift */; };
 		F7D8552726B150B80028AF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8552626B150B80028AF47 /* AppDelegate.swift */; };
 		F7D8552926B150B80028AF47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D8552826B150B80028AF47 /* SceneDelegate.swift */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		F762276A26B3F90C00097DD6 /* DetailPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlaceViewController.swift; sourceTree = "<group>"; };
+		F76F839E26B82F9F00582F0F /* RecomendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendTableViewCell.swift; sourceTree = "<group>"; };
+		F76F83A026B838CE00582F0F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		F7BF76DF26B6491100AA049B /* DataDummies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDummies.swift; sourceTree = "<group>"; };
 		F7D8552326B150B80028AF47 /* Travel ID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel ID.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D8552626B150B80028AF47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 				F7D8554626B1685F0028AF47 /* FetchImageURL.swift */,
 				F7DCF2AE26B660F4007FCE29 /* ReviewTableViewCell.swift */,
 				F7DCF2B026B6B542007FCE29 /* GaleryCollectionViewCell.swift */,
+				F76F839E26B82F9F00582F0F /* RecomendTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 				F7D8552A26B150B80028AF47 /* HomeViewController.swift */,
 				F7D8554226B164240028AF47 /* PlacesTableViewController.swift */,
 				F762276A26B3F90C00097DD6 /* DetailPlaceViewController.swift */,
+				F76F83A026B838CE00582F0F /* AboutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -206,8 +212,10 @@
 				F762276B26B3F90C00097DD6 /* DetailPlaceViewController.swift in Sources */,
 				F7DCF2B126B6B542007FCE29 /* GaleryCollectionViewCell.swift in Sources */,
 				F7D8552926B150B80028AF47 /* SceneDelegate.swift in Sources */,
+				F76F83A126B838CF00582F0F /* AboutViewController.swift in Sources */,
 				F7D8554726B1685F0028AF47 /* FetchImageURL.swift in Sources */,
 				F7D8554326B164240028AF47 /* PlacesTableViewController.swift in Sources */,
+				F76F839F26B82F9F00582F0F /* RecomendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
